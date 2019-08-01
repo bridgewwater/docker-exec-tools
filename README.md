@@ -30,6 +30,7 @@ $ sudo chmod +x /usr/local/bin/dive
 - <kbd>PageUp</kbd> Scroll up a page
 - <kbd>PageDown</kbd> Scroll down a page
 
+> more KeyBingds see [https://github.com/wagoodman/dive#keybindings](https://github.com/wagoodman/dive#keybindings)
 
 - uninstall as
 
