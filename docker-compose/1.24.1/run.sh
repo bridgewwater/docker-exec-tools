@@ -15,8 +15,10 @@
 
 set -e
 
+# tags see https://hub.docker.com/r/wagoodman/dive/tags
 VERSION="1.24.1"
 IMAGE="docker/compose:$VERSION"
+DOCKER_API_VERSION="1.37"
 
 
 # Setup options for connecting to docker host
@@ -26,25 +28,12 @@ fi
 if [ -S "$DOCKER_HOST" ]; then
     DOCKER_ADDR="-v $DOCKER_HOST:$DOCKER_HOST -e DOCKER_HOST"
 else
-    DOCKER_ADDR="-e DOCKER_HOST -e DOCKER_TLS_VERIFY -e DOCKER_CERT_PATH"
+    DOCKER_ADDR="-e DOCKER_API_VERSION=${DOCKER_API_VERSION}"
 fi
 
 
 # Setup volume mounts for compose config and context
-if [ "$(pwd)" != '/' ]; then
-    VOLUMES="-v $(pwd):$(pwd)"
-fi
-if [ -n "$COMPOSE_FILE" ]; then
-    COMPOSE_OPTIONS="$COMPOSE_OPTIONS -e COMPOSE_FILE=$COMPOSE_FILE"
-    compose_dir=$(realpath $(dirname $COMPOSE_FILE))
-fi
-# TODO: also check --file argument
-if [ -n "$compose_dir" ]; then
-    VOLUMES="$VOLUMES -v $compose_dir:$compose_dir"
-fi
-if [ -n "$HOME" ]; then
-    VOLUMES="$VOLUMES -v $HOME:$HOME -v $HOME:/root" # mount $HOME in /root to share docker.config
-fi
+VOLUMES="/var/run/docker.sock:/var/run/docker.sock"
 
 # Only allocate tty if we detect one
 if [ -t 0 -a -t 1 ]; then
@@ -60,4 +49,5 @@ if [ ! -z "$(docker info 2>/dev/null | grep userns)" ]; then
     DOCKER_RUN_OPTIONS="$DOCKER_RUN_OPTIONS --userns=host"
 fi
 
+# echo "exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $COMPOSE_OPTIONS $VOLUMES \"$(pwd)\" $IMAGE \"$@\""
 exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $COMPOSE_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE "$@"
