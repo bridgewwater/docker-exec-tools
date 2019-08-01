@@ -18,3 +18,21 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 
 instal dive as exec
 
+```sh
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/dive/v0.7.2/run.sh -o /usr/local/bin/dive
+$ sudo chmod +x /usr/local/bin/dive
+```
+
+- <kbd>Tab</kbd>  Switch between the layer and filetree views
+- <kbd>Space</kbd> collapse/uncollapse a directory
+- <kbd>Ctrl + Space</kbd>  collapse/uncollapse all directories
+- <kbd>Ctrl + F</kbd> Filter files
+- <kbd>PageUp</kbd> Scroll up a page
+- <kbd>PageDown</kbd> Scroll down a page
+
+
+- uninstall as
+
+```sh
+$ sudo rm -rf /usr/local/bin/dive
+```

@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Run dive in a container
-#
+# use as dive [imageID or imageName]
 
 set -e
 
