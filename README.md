@@ -37,3 +37,14 @@ $ sudo chmod +x /usr/local/bin/dive
 ```sh
 $ sudo rm -rf /usr/local/bin/dive
 ```
+
+## pgcli
+
+### pygmy/pgcli
+
+install pygmy/pgcli as exec
+
+```bash
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/pgcli/pygmy/run.sh -o /usr/local/bin/pgcli
+$ sudo chmod +x /usr/local/bin/pgcli
+```
