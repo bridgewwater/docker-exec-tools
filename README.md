@@ -40,6 +40,13 @@ $ sudo rm -rf /usr/local/bin/dive
 
 ## pgcli
 
+### psql
+
+```bash
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/pgcli/psql/9.6.16-alpine/run.sh -o /usr/local/bin/psql
+$ sudo chmod +x /usr/local/bin/psql
+```
+
 ### pygmy/pgcli
 
 install pygmy/pgcli as exec
