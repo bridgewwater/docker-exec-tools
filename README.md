@@ -3,7 +3,7 @@
 - must run docker first
 - then use script install tools
 
-## docker-compose
+## docker-compose run as contain
 
 - for linux use only
 
@@ -11,6 +11,20 @@
 $ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/docker-compose/1.24.1/run.sh -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
+
+### support arm
+
+- Support architectures: arm32v6, amd64, arm32v7, arm64v8, i386
+
+use images [gists/docker-compose-bin](https://hub.docker.com/r/gists/docker-compose-bin)
+
+```sh
+$ sudo curl -L --fail https://github.com/bridgewwater/docker-exec-tools/releases/download/v1.26.0-arm/run.sh -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+# then check
+$ docker-compose version
+```
+
 
 ## dive
 
