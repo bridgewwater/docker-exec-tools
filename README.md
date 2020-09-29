@@ -38,7 +38,7 @@ $ docker-compose version
 instal dive as exec
 
 ```sh
-$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/dive/v0.7.2/run.sh -o /usr/local/bin/dive
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/dive/v0.9.2/run.sh -o /usr/local/bin/dive
 $ sudo chmod +x /usr/local/bin/dive
 ```
 
