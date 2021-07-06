@@ -33,7 +33,8 @@ fi
 
 
 # Setup volume mounts for compose config and context
-VOLUMES="/var/run/docker.sock:/var/run/docker.sock"
+# VOLUMES="/var/run/docker.sock:/var/run/docker.sock"
+VOLUMES=""
 
 # Only allocate tty if we detect one
 if [ -t 0 -a -t 1 ]; then
@@ -50,4 +51,5 @@ if [ ! -z "$(docker info 2>/dev/null | grep userns)" ]; then
 fi
 
 # echo "exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $COMPOSE_OPTIONS $VOLUMES \"$(pwd)\" $IMAGE \"$@\""
+#echo "docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $COMPOSE_OPTIONS $VOLUMES -w $(pwd) $IMAGE $@"
 exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $COMPOSE_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE "$@"
