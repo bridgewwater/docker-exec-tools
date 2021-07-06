@@ -8,7 +8,7 @@
 - for linux use only
 
 ```sh
-$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/docker-compose/1.24.1/run.sh -o /usr/local/bin/docker-compose
+$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/1.24.1/run.sh -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
@@ -17,7 +17,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 - lastest support arm32v7
 
 ```sh
-$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/docker-compose/arm/arm32v7-latest/run.sh -o /usr/local/bin/docker-compose
+$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/arm/arm32v7-latest/run.sh -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
@@ -38,7 +38,7 @@ $ docker-compose version
 instal dive as exec
 
 ```sh
-$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/dive/v0.9.2/run.sh -o /usr/local/bin/dive
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/dive/v0.9.2/run.sh -o /usr/local/bin/dive
 $ sudo chmod +x /usr/local/bin/dive
 ```
 
@@ -57,12 +57,20 @@ $ sudo chmod +x /usr/local/bin/dive
 $ sudo rm -rf /usr/local/bin/dive
 ```
 
+## qrencode
+
+```bash
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/qrencode/latest/run.sh -o /usr/local/bin/qrencode
+$ sudo chmod +x /usr/local/bin/qrencode
+$ qrencode --help
+```
+
 ## pgcli
 
 ### psql
 
 ```bash
-$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/pgcli/psql/9.6.16-alpine/run.sh -o /usr/local/bin/psql
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/pgcli/psql/9.6.16-alpine/run.sh -o /usr/local/bin/psql
 $ sudo chmod +x /usr/local/bin/psql
 ```
 
@@ -71,6 +79,6 @@ $ sudo chmod +x /usr/local/bin/psql
 install pygmy/pgcli as exec
 
 ```bash
-$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/master/pgcli/pygmy/run.sh -o /usr/local/bin/pgcli
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/pgcli/pygmy/run.sh -o /usr/local/bin/pgcli
 $ sudo chmod +x /usr/local/bin/pgcli
 ```
