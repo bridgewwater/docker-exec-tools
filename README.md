@@ -30,6 +30,16 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ docker-compose version
 ```
 
+# kubectl
+
+- for [https://github.com/kubernetes/kubectl](https://github.com/kubernetes/kubectl)
+
+```sh
+$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/kubectl/latest/run.sh -o /usr/local/bin/kubectl
+$ sudo chmod +x /usr/local/bin/kubectl
+# then check
+$ kubectl --help
+```
 
 ## dive
 
