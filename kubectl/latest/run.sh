@@ -50,4 +50,5 @@ if [ ! -z "$(docker info 2>/dev/null | grep userns)" ]; then
 fi
 
 # echo "exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $COMPOSE_OPTIONS $VOLUMES \"$(pwd)\" $IMAGE \"$@\""
-exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $COMPOSE_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE "$@"
+# exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $COMPOSE_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE "$@"
+exec docker run --rm  -w "$(pwd)" $IMAGE "$@"
