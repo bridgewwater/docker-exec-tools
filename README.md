@@ -5,7 +5,14 @@
 
 ## docker-compose run as contain
 
-- for linux use only
+- for linux use only at v2
+
+```sh
+$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/2.11.2-v2/run.sh -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+
+- for linux v1 version
 
 ```sh
 $ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/1.24.1/run.sh -o /usr/local/bin/docker-compose
@@ -13,6 +20,13 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 ### support arm
+
+- lastest v2 support arm32v7
+
+```bash
+$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/arm/arm32v7-v2/run.sh -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
 
 - lastest support arm32v7
 
