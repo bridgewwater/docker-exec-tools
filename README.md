@@ -44,7 +44,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ docker-compose version
 ```
 
-# kubectl
+## kubectl
 
 - for [https://github.com/kubernetes/kubectl](https://github.com/kubernetes/kubectl)
 
@@ -53,6 +53,17 @@ $ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec
 $ sudo chmod +x /usr/local/bin/kubectl
 # then check
 $ kubectl --help
+```
+
+## httpstat
+
+- for [https://github.com/davecheney/httpstat](https://github.com/davecheney/httpstat)
+
+```bash
+$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/httpstat/latest/run.sh -o /usr/local/bin/httpstat
+$ sudo chmod +x /usr/local/bin/httpstat
+# then check
+$ httpstat --help
 ```
 
 ## dive
