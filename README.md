@@ -73,7 +73,7 @@ $ httpstat --help
 instal dive as exec
 
 ```sh
-$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/dive/v0.9.2/run.sh -o /usr/local/bin/dive
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/dive/v0.10.0/run.sh -o /usr/local/bin/dive
 $ sudo chmod +x /usr/local/bin/dive
 ```
 
