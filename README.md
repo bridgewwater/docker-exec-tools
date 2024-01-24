@@ -73,8 +73,12 @@ $ httpstat --help
 instal dive as exec
 
 ```sh
-$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/dive/v0.10.0/run.sh -o /usr/local/bin/dive
+$ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/dive/v0.11.0/run.sh -o /usr/local/bin/dive
 $ sudo chmod +x /usr/local/bin/dive
+
+# check
+$ dive --help
+$ dive --version
 ```
 
 - <kbd>Tab</kbd>  Switch between the layer and filetree views
