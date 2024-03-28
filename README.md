@@ -5,39 +5,46 @@
 
 ## docker-compose run as contain
 
+- for full platform at v2.17.3
+
+```bash
+$ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/full-platform/alpinelinux/run.sh -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+
 - for linux use only at v2
 
-```sh
+```bash
 $ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/2.11.2-v2/run.sh -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 - for linux v1 version
 
-```sh
+```bash
 $ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/1.24.1/run.sh -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 ### support arm
 
-- lastest v2 support arm32v7
+- latest v2 support arm32v7
 
 ```bash
 $ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/arm/arm32v7-v2/run.sh -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-- lastest support arm32v7
+- latest support arm32v7
 
-```sh
+```bash
 $ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/docker-compose/arm/arm32v7-latest/run.sh -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 - Support architectures: arm32v6, amd64, arm32v7, arm64v8
 
-```sh
+```bash
 $ sudo curl -L --fail https://github.com/bridgewwater/docker-exec-tools/releases/download/v1.26.0-arm-ls5/run.sh -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 # then check
@@ -48,7 +55,7 @@ $ docker-compose version
 
 - for [https://github.com/kubernetes/kubectl](https://github.com/kubernetes/kubectl)
 
-```sh
+```bash
 $ sudo curl -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/kubectl/latest/run.sh -o /usr/local/bin/kubectl
 $ sudo chmod +x /usr/local/bin/kubectl
 # then check
@@ -72,7 +79,7 @@ $ httpstat --help
 
 instal dive as exec
 
-```sh
+```bash
 $ sudo curl -s -L --fail https://raw.githubusercontent.com/bridgewwater/docker-exec-tools/main/dive/v0.11.0/run.sh -o /usr/local/bin/dive
 $ sudo chmod +x /usr/local/bin/dive
 
@@ -92,7 +99,7 @@ $ dive --version
 
 - uninstall as
 
-```sh
+```bash
 $ sudo rm -rf /usr/local/bin/dive
 ```
 
